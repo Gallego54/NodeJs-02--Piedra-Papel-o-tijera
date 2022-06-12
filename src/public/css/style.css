@@ -1,0 +1,173 @@
+
+@keyframes shadowboxmove {
+    0%{
+        box-shadow: -50px -20px 3px rgb(100, 100, 100);
+    }
+
+    100%{
+        box-shadow: 50px 150px 3px rgb(100, 100, 100);
+    }
+}
+
+@keyframes shadowtextmove {
+    0%{
+       text-shadow: -50px 75px 3px black;
+    }
+
+    100%{
+        text-shadow: 50px 200px 3px black;
+    }
+}
+
+
+.title {
+    font-family:'Courier New', Courier, monospace;
+    border-left: 2px solid black;
+    border-right: 2px solid black;
+    border-bottom: 2px solid black;
+    border-style: dashed;
+    width: 50%;
+    margin: 5px auto;
+    background-color: rgb(250, 250, 250);
+    margin-bottom: 100px;
+    animation: shadowboxmove 10s forwards ease-in-out, shadowtextmove 10s forwards ease-in-out;
+}
+
+
+.inline-block{
+    display:inline-block;
+}
+
+.container-submit {
+    display: block;
+    margin: 20px auto;
+    text-align: right;
+    
+}
+
+@keyframes rotate {
+    0%{
+        transform: rotate(0deg);
+    }
+
+    100%{
+        transform: rotate(360deg);
+    }
+}
+
+.submit{
+    width: 60px;
+    height: 60px;
+    border-radius: 100%;
+    border: 1px solid black;
+    border-style: dashed;
+    color: transparent;
+    margin-right: 100px;
+    animation: rotate 5s 0s linear infinite;
+    transition: all 1s;
+
+}
+
+.submit:hover{
+    border-color: white;
+    background-color: rgb(129, 129, 129);
+
+}
+
+.img{
+    width: 300px;
+    height: 250px;
+}
+
+.card{
+    animation: shadowboxmove 10s forwards ease-in-out, shadowtextmove 10s forwards ease-in-out;
+    
+}
+
+.result{
+    font-size: 45px;
+    width: 50%;
+    border-bottom: 2px solid black;
+    font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    display: block;
+    margin: 20px auto;
+    text-align: center;
+    animation:  shadowtextmove 10s forwards ease-in-out;
+}
+
+
+@keyframes dropAfter {
+    0%{
+        transform: rotate(20deg);
+        left: 150%;
+    }
+    25%{
+        transform: rotate(0deg);
+        left: 50%;
+    }
+    50%{
+        transform: rotate(-1deg);
+        left: 45%;
+    }
+    100%{
+        transform: rotate(-10deg);
+        left: 50%;
+    }
+}
+
+.result::after{
+    top: 50%;
+    left: 150%;
+    content: '';
+    opacity: .7;
+    position: absolute;
+    width: 100px;
+    height: 100px;
+    background-color: rgb(52, 52, 52);
+    transform: rotate(20deg);
+    animation: dropAfter 5s .5s forwards ease-in-out, shadowboxmove 10s forwards ease-in-out;
+}
+
+@keyframes dropBefore {
+    0%{
+        transform: rotate(45deg);
+        left: 20%;
+        top: -20%;
+    }
+    25%{
+        left: 20%;
+        top: 50%;
+        transform: rotate(40deg);
+    }
+    50%{
+        left: 20%;
+        top: 50%;
+        transform: rotate(20deg);
+    }
+    100%{
+        top: 30%;
+        left: 20%;
+        transform: rotate(10deg);
+    }
+}
+
+
+.result::before{
+    left: 20%;
+    top: -20%;
+    opacity: .7;
+    content: '';
+    position: absolute;
+    width: 100px;
+    height: 100px;
+    background-color: rgb(51, 51, 51);
+    transform: rotate(45deg);
+    animation: dropBefore 1s .5s forwards ease-in-out, shadowboxmove 10s forwards ease-in-out;
+}
+
+
+.result::before.submit:hover{
+    height: 200px;
+    width: 200px;
+}
+

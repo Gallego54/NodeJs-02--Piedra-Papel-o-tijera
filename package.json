@@ -9,5 +9,8 @@
   "author": "",
   "license": "ISC",
   "stdEsm": false,
-  "type":"module"
+  "type": "module",
+  "dependencies": {
+    "bootstrap": "^5.2.0-beta1"
+  }
 }

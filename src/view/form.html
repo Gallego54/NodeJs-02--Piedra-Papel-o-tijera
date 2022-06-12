@@ -1,17 +1,64 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+    <style>
+
+    </style>
+
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Formulario NodeJS</title>
 </head>
 <body>
-    <form action="result" method="post">
-        <input type="radio" name="option" id="" value="1" checked> Piedra
-        <input type="radio" name="option" id="" value="2"> Papel 
-        <input type="radio" name="option" id="" value="3"> Tijera
-        <input type="submit">
+    <h1 class="display-4 text-center title">P/P/T     -   GAME</h1>
+
+    <form action="result" class="content" method="post">
+    <div class="container">
+        <div class="row center-block">
+            <div class="col">
+                <label for="opt1">
+                <div class="card border" style="width: 18rem;">
+                    <img class="card-img-top img" src="https://img.freepik.com/vector-gratis/piedras-pared-pila-rocas-al-aire-libre-simbolo-hormigon-carbon-vector-dibujos-animados-aislado-sobre-fondo-blanco_81894-5786.jpg?w=2000" alt="Card image cap">
+                    <div class="card-body">
+                      <h5 class="text-center card-title">Piedra</h5>
+                      <input type="radio" class="" id="opt1" name="option" id="" value="1" checked>
+                    </div>
+                </div>
+                </label>
+            </div>
+            <div class="col">
+                <label for="opt2">
+                <div class="card" style="width: 18rem;">
+                    <img class="card-img-top img" src="https://static.vecteezy.com/system/resources/previews/002/383/145/non_2x/cartoon-illustration-of-toilet-paper-free-vector.jpg" alt="Card image cap">
+                    <div class="card-body">
+                      <h5 class="text-center card-title">Papel</h5>
+                      <input type="radio" class="" id="opt2" name="option" id="" value="2">
+                    </div>
+                </div>
+                </label>
+            </div>
+            <div class="col">
+                <label for="opt3">
+                <div class="card" style="width: 18rem;">
+                    <img class="card-img-top img" src="https://us.123rf.com/450wm/in8finity/in8finity1610/in8finity161000032/67162265-icono-de-la-mano-de-la-motosierra-en-el-fondo-blanco-ilustraci%C3%B3n-vectorial.jpg?ver=6" alt="Card image cap">
+                    <div class="card-body">
+                      <h5 class="text-center card-title">Tijera</h5>
+                      <input type="radio" class="" id="opt3" name="option" id="" value="3">  
+                    </div>
+                </div>
+                </label>
+            </div>
+        </div>
+    </div>
+    <div class="container-submit">
+        <input class="submit" type="submit">
+    </div>
     </form>
+
+
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.bundle.min.js"></script>
 </body>
 </html>
